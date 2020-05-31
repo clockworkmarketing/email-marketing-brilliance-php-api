@@ -13,7 +13,6 @@ class Request
 
     public function __construct($api_id, $api_key, $client_options = [])
     {
-
         $this->api_id = $api_id;
         $this->api_key = $api_key;
 
@@ -33,11 +32,9 @@ class Request
 
     private function request($method, $request, $options)
     {
-
-
         $client = $this->client;
 
-         // Initialise the results of the API request
+        // Initialise the results of the API request
         $results = [];
         $results['valid'] = false;
 
