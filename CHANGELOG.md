@@ -4,4 +4,4 @@ All notable changes to `email-marketing-brilliance-php-api` will be documented i
 
 ## 1.0.0 - 2022-05-31
 
-- initial release
+- Initial release
