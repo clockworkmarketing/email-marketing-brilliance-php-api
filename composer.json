@@ -1,0 +1,48 @@
+{
+    "name": "clockworkmarketing/email-marketing-brilliance-php-api",
+    "description": "This is a API Wrapper around https://app.emailmarketingbrilliance.co.uk/help/api_integration",
+    "keywords": [
+        "clockworkmarketing",
+        "email-marketing-brilliance-php-api"
+    ],
+    "homepage": "https://github.com/clockworkmarketing/email-marketing-brilliance-php-api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Craig Potter",
+            "email": "Craig.Potter@clock-work.co.uk",
+            "homepage": "https://www.clock-work.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpunit/phpunit": "^9.0",
+        "vimeo/psalm": "^3.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "ClockworkMarketing\\EmailMarketingBrilliance\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ClockworkMarketing\\EmailMarketingBrilliance\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
