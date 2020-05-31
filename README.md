@@ -1,4 +1,4 @@
-# :package_description
+# A simple PHP Wrapper around the Email Marketing Brilliance Dashboard 
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/clockworkmarketing/email-marketing-brilliance-php-api.svg?style=flat-square)](https://packagist.org/packages/clockworkmarketing/email-marketing-brilliance-php-api)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/clockworkmarketing/email-marketing-brilliance-php-api/run-tests?label=tests)](https://github.com/clockworkmarketing/email-marketing-brilliance-php-api/actions?query=workflow%3Arun-tests+branch%3Amaster)
@@ -22,17 +22,24 @@ composer require clockworkmarketing/email-marketing-brilliance-php-api
 
 use ClockworkMarketing\EmailMarketingBrilliance\EmailMarketingBrilliance;
 
-require 'vendor/autoload.php';
-
-$emb = EmailMarketingBrilliance::setAuthDetails('API_ID', 'API_KEY')->call('GET','/users/details', ['email_address'=>'example@example.com']);
+$response = $emb = EmailMarketingBrilliance::setAuthDetails('API_ID', 'API_KEY')
+    ->call(
+        'GET',
+        '/users/details', 
+        ['email_address'=>'example@example.com']
+    );
 
 // OR // 
 
 $emb = new EmailMarketingBrilliance('API_ID', 'API_KEY');
 
-$emb->call('GET','/users/details', ['email_address'=>'example@example.com']);
+$response = $emb->call(
+    'GET',
+    '/users/details', 
+    ['email_address'=>'example@example.com']
+);
 
-var_dump($emb);
+
 
 ```
 
